@@ -17,7 +17,9 @@ function App() {
           <Route path='/Home'>
             <Home />
           </Route>
-          <Route path='/Quotes'></Route>
+          <Route path='/Quotes'>
+            
+          </Route>
         </Switch>
       
       </div>

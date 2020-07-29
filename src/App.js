@@ -19,7 +19,7 @@ function App() {
             <Home />
           </Route>
           <Route path='/Quotes'>
-            
+            <Quotes />
           </Route>
         </Switch>
       

@@ -14,7 +14,9 @@ function App() {
           <Link to="/Jokes"> Jokes </Link>
         </navbar>
         <Switch>
-          <Route></Route>
+          <Route path='/Home'>
+            
+          </Route>
         </Switch>
       
       </div>

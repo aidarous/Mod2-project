@@ -15,7 +15,7 @@ function App() {
         </navbar>
         <Switch>
           <Route path='/Home'>
-            
+            <Home />
           </Route>
         </Switch>
       

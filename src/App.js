@@ -8,7 +8,9 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <navbar></navbar>
+        <navbar>
+          <Link></Link>
+        </navbar>
       
       </div>
 

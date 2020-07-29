@@ -11,6 +11,7 @@ function App() {
         <navbar>
           <Link to="/Home">Home </Link>
           <Link to="/Quotes">Quotes</Link>
+          <Link></Link>
         </navbar>
       
       </div>

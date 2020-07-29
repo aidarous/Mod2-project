@@ -9,7 +9,7 @@ function App() {
     <Router>
       <div className="App">
         <navbar>
-          <Link></Link>
+          <Link to="Home">Home </Link>
         </navbar>
       
       </div>

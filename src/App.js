@@ -13,6 +13,7 @@ function App() {
           <Link to="/Quotes"> Quotes </Link> 
           <Link to="/Jokes"> Jokes </Link>
         </navbar>
+        <Switch></Switch>
       
       </div>
 

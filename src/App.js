@@ -9,8 +9,8 @@ function App() {
     <Router>
       <div className="App">
         <navbar>
-          <Link to="Home">Home </Link>
-          <Link></Link>
+          <Link to="/Home">Home </Link>
+          <Link to="/Quotes">Quotes</Link>
         </navbar>
       
       </div>

@@ -9,8 +9,8 @@ import axios from 'axios';
 // * display it for the user in an oragnized/filtered manner
 
 class Quotes extends Component {
-    constructor(){
-        
+    constructor(props){
+
     }
     render() {
         return (

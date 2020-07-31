@@ -19,7 +19,12 @@ class Quotes extends Component {
 
     async getFirstQuote(){
         const result = await axios.get("https://type.fit/api/quotes")
-        
+        //fetches quote from api
+        const quoteOne = result.data.born;
+
+        this.setState({
+            
+        })
 
     }
     render() {

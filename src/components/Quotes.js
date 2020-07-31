@@ -13,7 +13,7 @@ class Quotes extends Component {
         super(props);
 
         this.state = {
-            
+            firstQuote: ""
         }
     }
     render() {

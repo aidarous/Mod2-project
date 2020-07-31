@@ -27,12 +27,13 @@ class Quotes extends Component {
         })
     }
     componentDidMount () {
-        
+        this.getFirstQuote();
     }
     render() {
         return (
             <div>
                 <h1> Quotes</h1>
+                
             </div>
         )
     }

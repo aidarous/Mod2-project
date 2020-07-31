@@ -10,7 +10,7 @@ import axios from 'axios';
 
 class Quotes extends Component {
     constructor(props){
-
+        super();
     }
     render() {
         return (

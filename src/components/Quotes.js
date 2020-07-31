@@ -16,6 +16,10 @@ class Quotes extends Component {
             firstQuote: ""
         }
     }
+
+    async getFirstQuote(){
+        
+    }
     render() {
         return (
             <div>

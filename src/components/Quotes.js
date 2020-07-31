@@ -11,6 +11,10 @@ import axios from 'axios';
 class Quotes extends Component {
     constructor(props){
         super(props);
+
+        this.state = {
+            
+        }
     }
     render() {
         return (

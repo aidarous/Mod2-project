@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-
+const BASE_URL = "https://type.fit/api/quotes"
 
 // * Pseudo code 
  
@@ -13,27 +13,29 @@ class Quotes extends Component {
         super(props);
 
         this.state = {
-            firstQuote: ""
+            
         }
     }
 
-    async getFirstQuote(){
-        const result = await axios.get("https://type.fit/api/quotes")
-        //fetches quote from api
-        const quoteOne = result.data.text;
+    // async getFirstQuote(){
+    //     const result = await axios.get("https://type.fit/api/quotes")
+    //     //fetches quote from api
+    //     const quoteOne = result.data;
 
-        this.setState({
-            firstQuote = quoteOne 
-        })
-    }
+    //     this.setState({
+    //         firstQuote: quoteOne 
+    //     })
+    // }
     componentDidMount () {
-        this.getFirstQuote();
+        axios.get(`${BASE_URL}`)
+        .then(result => this.setState({ info: result.data.text}))
+        .catch(e => console.error(e.message));
     }
     render() {
         return (
             <div>
                 <h1> Quotes</h1>
-                
+                <h2>  </h2>
             </div>
         )
     }

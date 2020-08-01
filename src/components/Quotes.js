@@ -14,7 +14,8 @@ class Quotes extends Component {
 
         this.state = {
             inspirationalQuote1: "",
-            wolfgang: ""
+            wolfgang: "",
+            inspirationalQuote2: ""
             
         }
     }

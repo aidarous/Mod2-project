@@ -57,6 +57,8 @@ class Quotes extends Component {
         const feelsAuthorOne = result.data[12].author
         const feelsQuoteTwo = result.data[45].text;
         const feelsAuthorTwo = result.data[45].author
+        const feelsQuoteThree = result.data[56].text;
+        const feelsAuthorThree = result.data[56].author
 
        
 
@@ -64,7 +66,9 @@ class Quotes extends Component {
             feelsQuote1: feelsQuoteOne,
             feelsAuthor1: feelsAuthorOne,
             feelsQuote2: feelsQuoteTwo,
-            feelsAuthor2: feelsAuthorTwo
+            feelsAuthor2: feelsAuthorTwo,
+            feelsQuote3: feelsQuoteThree,
+            feelsAuthor3: feelsAuthorThree
         
         })
     }
@@ -90,6 +94,8 @@ class Quotes extends Component {
                  <p> - {this.state.feelsAuthor1} </p> 
                  <h2>{this.state.feelsQuote2} </h2>
                  <p> - {this.state.feelsAuthor2} </p> 
+                 <h2>{this.state.feelsQuote3} </h2>
+                 <p> - {this.state.feelsAuthor3} </p> 
             </div>
         )
     }

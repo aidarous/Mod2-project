@@ -13,7 +13,8 @@ class Quotes extends Component {
         super(props);
 
         this.state = {
-            firstQuote: ""
+            firstQuote: "",
+            firstAuthor: ""
         }
     }
 
@@ -21,9 +22,11 @@ class Quotes extends Component {
         const result = await axios.get("https://type.fit/api/quotes")
         //fetches quote from api
         const quoteOne = result.data[0].text;
-
+        const authorOne = result.data[0].author;
         this.setState({
-            firstQuote: quoteOne 
+            firstQuote: quoteOne,
+            firstAuthor: authorOne 
+
         })
     }
     componentDidMount () {
@@ -34,6 +37,7 @@ class Quotes extends Component {
             <div>
                 <h1> Quotes</h1>
                 <h2>{this.state.firstQuote}   </h2>
+                <p> - {this.state.firstAuthor}</p>
             </div>
         )
     }

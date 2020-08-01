@@ -42,13 +42,16 @@ class Quotes extends Component {
 
         })
     }
+    async getFeelsQuote() {
+        const result = await axios.get("https://type.fit/api/quotes")
+    }
     componentDidMount () {
         this.getInspirationalQuote()
     }
     render() {
         return (
             <div>
-                <h1> Quotes</h1>
+                <h1> Inspirational </h1>
                 <h2>{this.state.inspirationalQuote1}   </h2>
                 <p> - {this.state.author1}</p>
                 

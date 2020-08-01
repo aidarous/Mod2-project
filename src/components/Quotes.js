@@ -23,6 +23,9 @@ class Quotes extends Component {
 
             feelsQuote1: "",
             feelsAuthor1: "",
+            feelsQuote2: "",
+            feelsAuthor2: "",
+
             
             
         }
@@ -51,14 +54,17 @@ class Quotes extends Component {
     async getFeels() {
         const result = await axios.get("https://type.fit/api/quotes")
         const feelsQuoteOne = result.data[12].text;
-        
         const feelsAuthorOne = result.data[12].author
+        const feelsQuoteTwo = result.data[45].text;
+        const feelsAuthorTwo = result.data[45].author
 
        
 
         this.setState({
             feelsQuote1: feelsQuoteOne,
-            feelsAuthor1: feelsAuthorOne
+            feelsAuthor1: feelsAuthorOne,
+            feelsQuote2: feelsQuoteTwo,
+            feelsAuthor2: feelsAuthorTwo
         
         })
     }
@@ -82,6 +88,8 @@ class Quotes extends Component {
                 <h1> Right in the feels</h1>
                  <h2>{this.state.feelsQuote1} </h2>
                  <p> - {this.state.feelsAuthor1} </p> 
+                 <h2>{this.state.feelsQuote2} </h2>
+                 <p> - {this.state.feelsAuthor2} </p> 
             </div>
         )
     }

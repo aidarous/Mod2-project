@@ -13,30 +13,30 @@ class Quotes extends Component {
         super(props);
 
         this.state = {
-            firstQuote: "",
+            inspirationalQuote1: "",
             firstAuthor: ""
         }
     }
-
+// function for quotes deemed inspiration
     async getInspirationalQuote(){
         const result = await axios.get("https://type.fit/api/quotes")
         //fetches quote from api
         const quoteOne = result.data[3].text;
         const authorOne = result.data[3].author;
         this.setState({
-            firstQuote: quoteOne,
+            inspirationalQuote1: quoteOne,
             firstAuthor: authorOne 
 
         })
     }
     componentDidMount () {
-        this.getFirstQuote()
+        this.getInspirationalQuote()
     }
     render() {
         return (
             <div>
                 <h1> Quotes</h1>
-                <h2>{this.state.firstQuote}   </h2>
+                <h2>{this.state.inspirationalQuote1}   </h2>
                 <p> - {this.state.firstAuthor}</p>
             </div>
         )

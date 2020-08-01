@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-//const BASE_URL = "https://type.fit/api/quotes"
+
+
 
 // * Pseudo code 
  
@@ -12,22 +13,7 @@ class Quotes extends Component {
     constructor(props){
         super(props);
 
-        this.state = {
-            inspirationalQuote1: "",
-            author1: "",
-            inspirationalQuote2: "",
-            author2: "",
-            inspirationalQuote3: "",
-            author3: "",
-            
-
-            feelsQuote1: "",
-            feelsAuthor1: "",
-            feelsQuote2: "",
-            feelsAuthor2: "",
-
-            
-            
+        this.state = { 
         }
     }
     
@@ -72,10 +58,20 @@ class Quotes extends Component {
         
         })
     }
- 
+    async getAction() {
+        const result = await axios.get("https://type.fit/api/quotes")
+
+        const actionQuoteOne = result.data[11].text
+        const actionAuthorOne = result.data[11].author
+        this.setState({
+            actionQuote1: actionQuoteOne,
+            actionAuthor1: actionAuthorOne
+        })
+    }
     componentDidMount () {
         this.getInspiration()
         this.getFeels()
+        this.getAction()
        
     }
     render() {
@@ -89,13 +85,19 @@ class Quotes extends Component {
                 <p> - {this.state.author2}</p>
                 <h2>{this.state.inspirationalQuote3}</h2>
                 <p> - {this.state.author3}</p>
+                
                 <h1> Right in the feels</h1>
                  <h2>{this.state.feelsQuote1} </h2>
                  <p> - {this.state.feelsAuthor1} </p> 
                  <h2>{this.state.feelsQuote2} </h2>
                  <p> - {this.state.feelsAuthor2} </p> 
                  <h2>{this.state.feelsQuote3} </h2>
-                 <p> - {this.state.feelsAuthor3} </p> 
+                 <p> - {this.state.feelsAuthor3} </p>
+
+                 <h1> Take Action</h1>
+                 <h2>{this.state.actionQuote1}</h2>
+                 <p> - {this.state.actionAuthor1}</p> 
+
             </div>
         )
     }

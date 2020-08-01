@@ -18,10 +18,13 @@ class Quotes extends Component {
             inspirationalQuote2: "",
             author2: "",
             inspirationalQuote3: "",
-            author3: ""
+            author3: "",
             
+
+            feelsQuote1: ""
         }
     }
+    
 // function for quotes deemed inspiration
     async getInspirationalQuote(){
         const result = await axios.get("https://type.fit/api/quotes")
@@ -44,6 +47,11 @@ class Quotes extends Component {
     }
     async getFeelsQuote() {
         const result = await axios.get("https://type.fit/api/quotes")
+        const feelsQuoteOne = result.data[12];
+
+        this.setState({
+            feelsQuote1: feelsQuoteOne
+        })
     }
     componentDidMount () {
         this.getInspirationalQuote()

@@ -25,6 +25,7 @@ class Quotes extends Component {
         //fetches quote from api
         const inspiQuoteOne = result.data[3].text;
         const authorOne = result.data[3].author;
+        const inspiQuoteTwo = result.data[4].text;
         this.setState({
             inspirationalQuote1: inspiQuoteOne,
             wolfgang: authorOne 

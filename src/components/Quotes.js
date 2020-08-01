@@ -28,7 +28,8 @@ class Quotes extends Component {
         const inspiQuoteTwo = result.data[4].text;
         this.setState({
             inspirationalQuote1: inspiQuoteOne,
-            wolfgang: authorOne 
+            wolfgang: authorOne,
+            inspirationalQuote2: inspiQuoteTwo 
 
         })
     }
@@ -41,6 +42,7 @@ class Quotes extends Component {
                 <h1> Quotes</h1>
                 <h2>{this.state.inspirationalQuote1}   </h2>
                 <p> - {this.state.wolfgang}</p>
+                <h2>{this.state.inspirationalQuote2}</h2>
             </div>
         )
     }

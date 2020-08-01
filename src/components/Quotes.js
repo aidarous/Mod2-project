@@ -65,11 +65,15 @@ class Quotes extends Component {
         const actionAuthorOne = result.data[11].author
         const actionQuoteTwo = result.data[29].text
         const actionAuthorTwo = result.data[29].author
+        const actionQuoteThree = result.data[30].text
+        const actionAuthorThree = result.data[30].author
         this.setState({
             actionQuote1: actionQuoteOne,
             actionAuthor1: actionAuthorOne,
             actionQuote2: actionQuoteTwo,
             actionAuthor2: actionAuthorTwo,
+            actionQuote3: actionQuoteThree,
+            actionAuthor3: actionAuthorThree,
         })
     }
     componentDidMount () {
@@ -103,6 +107,8 @@ class Quotes extends Component {
                  <p> - {this.state.actionAuthor1}</p> 
                  <h2>{this.state.actionQuote2}</h2>
                  <p> - {this.state.actionAuthor2}</p> 
+                 <h2>{this.state.actionQuote3}</h2>
+                 <p> - {this.state.actionAuthor3}</p> 
 
             </div>
         )

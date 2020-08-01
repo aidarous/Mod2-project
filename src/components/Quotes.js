@@ -15,8 +15,8 @@ class Quotes extends Component {
         this.state = {
             inspirationalQuote1: "",
             wolfgang: "",
-            inspirationalQuote2: ""
-            
+            inspirationalQuote2: "",
+            pulsifer: ""
         }
     }
 // function for quotes deemed inspiration

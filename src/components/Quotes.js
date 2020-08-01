@@ -14,10 +14,12 @@ class Quotes extends Component {
 
         this.state = {
             inspirationalQuote1: "",
-            wolfgang: "",
+            author1: "",
             inspirationalQuote2: "",
-            pulsifer: "",
-            inspirationalQuote3: ""
+            author2: "",
+            inspirationalQuote3: "",
+            author3: ""
+            
         }
     }
 // function for quotes deemed inspiration
@@ -29,12 +31,14 @@ class Quotes extends Component {
         const inspiQuoteTwo = result.data[4].text;
         const authorTwo = result.data[4].author;
         const inspiQuoteThree = result.data[6].text;
+        const authorThree = result.data[6].author;
         this.setState({
             inspirationalQuote1: inspiQuoteOne,
-            wolfgang: authorOne,
+            author1: authorOne,
             inspirationalQuote2: inspiQuoteTwo,
-            pulsifer: authorTwo,
-            inspirationalQuote3: inspiQuoteThree  
+            author2: authorTwo,
+            inspirationalQuote3: inspiQuoteThree,  
+            author3: authorThree
 
         })
     }
@@ -46,11 +50,12 @@ class Quotes extends Component {
             <div>
                 <h1> Quotes</h1>
                 <h2>{this.state.inspirationalQuote1}   </h2>
-                <p> - {this.state.wolfgang}</p>
+                <p> - {this.state.author1}</p>
                 
                 <h2>{this.state.inspirationalQuote2}</h2>
-                <p> - {this.state.pulsifer}</p>
+                <p> - {this.state.author2}</p>
                 <h2>{this.state.inspirationalQuote3}</h2>
+                <p> - {this.state.author3}</p>
             </div>
         )
     }

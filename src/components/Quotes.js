@@ -6,7 +6,7 @@ import axios from 'axios';
  
 // * This file will include code to display famous quotes to inspire writers
 // * First access the api and fetch its data using async functions
-// * display it for the user in an oragnized/filtered manner
+// * display it for the user in an organized/filtered manner
 
 class Quotes extends Component {
     constructor(props){
@@ -17,7 +17,7 @@ class Quotes extends Component {
             wolfgang: "",
             inspirationalQuote2: "",
             pulsifer: "",
-            inspirationalQuote3: "",
+            inspirationalQuote3: ""
         }
     }
 // function for quotes deemed inspiration
@@ -28,11 +28,13 @@ class Quotes extends Component {
         const authorOne = result.data[3].author;
         const inspiQuoteTwo = result.data[4].text;
         const authorTwo = result.data[4].author;
+        const inspiQuoteThree = result.data[6].text;
         this.setState({
             inspirationalQuote1: inspiQuoteOne,
             wolfgang: authorOne,
             inspirationalQuote2: inspiQuoteTwo,
-            pulsifer: authorTwo  
+            pulsifer: authorTwo,
+            inspirationalQuote3: inspiQuoteThree  
 
         })
     }
@@ -48,6 +50,7 @@ class Quotes extends Component {
                 
                 <h2>{this.state.inspirationalQuote2}</h2>
                 <p> - {this.state.pulsifer}</p>
+                <h2>{this.state.inspirationalQuote3}</h2>
             </div>
         )
     }

@@ -16,7 +16,8 @@ class Quotes extends Component {
             inspirationalQuote1: "",
             wolfgang: "",
             inspirationalQuote2: "",
-            pulsifer: ""
+            pulsifer: "",
+            inspirationalQuote3: "",
         }
     }
 // function for quotes deemed inspiration

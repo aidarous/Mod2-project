@@ -2,7 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import './App.css'
 import Home from './components/Home';
-import Quotes from './components/Quotes'
+import Quotes from './components/Quotes';
+import Jokes from './components/Jokes';
 
 
 function App() {
@@ -20,6 +21,9 @@ function App() {
           </Route>
           <Route path='/Quotes'>
             <Quotes />
+          </Route>
+          <Route path='/Jokes'>
+            <Jokes />
           </Route>
         </Switch>
       

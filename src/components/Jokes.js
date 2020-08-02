@@ -16,6 +16,10 @@ class Jokes extends Component {
             const punchlineOne = result.data[0].punchline
             const randomSetupTwo = result.data[1].setup
             const punchlineTwo = result.data[1].punchline
+            const randomSetupThree = result.data[2].setup
+            const punchlineThree = result.data[2].punchline
+            const randomSetupFour = result.data[3].setup
+            const punchlineFour = result.data[3].punchline
             
             
             this.setState({
@@ -23,6 +27,10 @@ class Jokes extends Component {
                 punchline1: punchlineOne,
                 setup2: randomSetupTwo,
                 punchline2: punchlineTwo,
+                setup3: randomSetupThree,
+                punchline3: punchlineThree,
+                setup4: randomSetupFour,
+                punchline4: punchlineFour,
             })
         }
     componentDidMount () {
@@ -36,6 +44,11 @@ class Jokes extends Component {
                 <p> {this.state.punchline1}</p>
                 <h2>{this.state.setup2}</h2>
                 <p> {this.state.punchline2}</p>
+                <h2>{this.state.setup3}</h2>
+                <p> {this.state.punchline3}</p>
+                <h2>{this.state.setup4}</h2>
+                <p> {this.state.punchline4}</p>
+                
                
 
             </div>

@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 
-
+// Pseudo code
+/* */
 class Jokes extends Component {
     constructor(props) {
         super(props)

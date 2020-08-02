@@ -11,7 +11,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <nav className={}>
+        <nav className="primary">
           <Link to="/Home">Home </Link> 
           <Link to="/Quotes"> Quotes </Link> 
           <Link to="/Jokes"> Jokes </Link>

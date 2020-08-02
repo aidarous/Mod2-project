@@ -9,7 +9,7 @@ class Home extends Component {
         return (
                 <div>
                     <h1> Home</h1>
-                    <img src={notebook} />
+                    <img src={notebook} rounded />
                 </div>
             
         );

@@ -76,10 +76,22 @@ class Quotes extends Component {
             actionAuthor3: actionAuthorThree,
         })
     }
+
+    async getWisdom() {
+        const result = await axios.get("https://type.fit/api/quotes")
+        const wisdomQuoteOne = result.data[10].text
+        const wisdomAuthorOne = result.data[10].author
+
+        this.setState({
+            wisdomQuote1: wisdomQuoteOne,
+            wisdomAuthor1: wisdomAuthorOne
+        })
+    }
     componentDidMount () {
         this.getInspiration()
         this.getFeels()
         this.getAction()
+        this.getWisdom()
        
     }
     render() {
@@ -109,6 +121,10 @@ class Quotes extends Component {
                  <p> - {this.state.actionAuthor2}</p> 
                  <h2>{this.state.actionQuote3}</h2>
                  <p> - {this.state.actionAuthor3}</p> 
+
+                 <h1>Wisdom</h1>
+                 <h2>{this.state.wisdomQuote1}</h2>
+                 <p> - {this.state.wisdomAuthor1}</p>
 
             </div>
         )

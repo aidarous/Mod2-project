@@ -79,16 +79,19 @@ class Quotes extends Component {
 
     async getWisdom() {
         const result = await axios.get("https://type.fit/api/quotes")
-        const wisdomQuoteOne = result.data[10].text
-        const wisdomAuthorOne = result.data[10].author
-        const wisdomQuoteTwo = result.data[15].text
-        const wisdomAuthorTwo = result.data[15].author
-
+        const wisdomQuoteOne = result.data[10].text;
+        const wisdomAuthorOne = result.data[10].author;
+        const wisdomQuoteTwo = result.data[15].text;
+        const wisdomAuthorTwo = result.data[15].author;
+        const wisdomQuoteThree = result.data[17].text;
+        const wisdomAuthorThree = result.data[17].author;
         this.setState({
             wisdomQuote1: wisdomQuoteOne,
             wisdomAuthor1: wisdomAuthorOne,
             wisdomQuote2: wisdomQuoteTwo,
-            wisdomAuthor2: wisdomAuthorTwo
+            wisdomAuthor2: wisdomAuthorTwo,
+            wisdomQuote3: wisdomQuoteThree, //unknown author
+            wisdomAuthor3: wisdomAuthorThree // null because author is unknown
             
         })
     }
@@ -132,6 +135,8 @@ class Quotes extends Component {
                  <p> - {this.state.wisdomAuthor1}</p>
                  <h2>{this.state.wisdomQuote2}</h2>
                  <p> - Unknown </p>
+                 <h2>{this.state.wisdomQuote3}</h2>
+                 <p> -  Uknown </p>
 
             </div>
         )

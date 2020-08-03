@@ -2,7 +2,12 @@ import React, { Component } from 'react'
 import axios from 'axios';
 
 // Pseudo code
-/* */
+/* 
+* make axios request for the api
+* update the set state
+* render it to the screen
+*
+*/
 class Jokes extends Component {
     constructor(props) {
         super(props)

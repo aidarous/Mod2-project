@@ -3,7 +3,15 @@
 }
 
 .home-background{
-  background-image: url("../src/assets/notebook.jpg")no-repeat;
-  height: 100vh;
-  width:  100vw;
+  background-image: url("../src/assets/trashcan.jpg");
+  background-size:contain;
+    background-position:top;
+    background: cover;
+}
+
+.quote-background{
+  background-image: url("../src/assets/desk.jpg");
+  background-size:contain;
+    background-position:top;
+    background: cover;
 }

@@ -104,7 +104,7 @@ class Quotes extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="quote-background">
                 <h1> Inspirational </h1>
                 <h2>{this.state.inspirationalQuote1}   </h2>
                 <p> - {this.state.author1}</p>

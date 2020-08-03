@@ -11,8 +11,8 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <div bg="dark" variant="dark">
-          <nav className="primary mr-auto">
+        <div bg="dark" variant="dark" className="primary">
+          <nav className="ml-auto">
             <Link to="/Home">Home </Link> 
             <Link to="/Quotes"> Quotes </Link> 
             <Link to="/Jokes"> Jokes </Link>

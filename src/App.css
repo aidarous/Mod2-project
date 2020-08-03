@@ -15,3 +15,13 @@
     background-position:top;
     background: cover;
 }
+
+.joke-background{
+  background-image: url("../src/assets/laughter.jpg");
+  background-size:contain;
+    background-position:top;
+    background: cover;
+}
+.text{
+  color: azure;
+}
